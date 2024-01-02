@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+[class*="col-"] {float: left;}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;} 
+
+html, body  {
+	height: 100%;
+	margin: 0;
+}
+
+.full-height {
+	height: 100%;
+}
+
+[id*="objeto"] {
+	width: 50%;
+	height: 50%;
+}
+
+#objeto1 {
+	background-color: red;
+	transition: width 4s ease-in-out ;
+}
+
+#objeto1:hover {
+	width: 100%;
+}
+
+#objeto2 {
+	background-color: yellow ;
+	position: relative;
+}
+
+.shake-horizontal:hover {
+	animation: shake-horizontal 0.3s linear infinite ;
+}
+
+#objeto3 {
+	background-color: blue ;
+	position: relative;
+}
+
+.shake-vertical:hover {
+	animation: shake-vertical 0.3s linear infinite ;
+}
+
+#objeto4 {
+	background-color: magenta ;
+	transition: 2s 0.5s;
+}
+
+.rotate-center:hover {
+	transform: rotate(360deg);
+	-webkit- transform: rotate(360deg);
+}
+
+#objeto5 {
+	background-color: lime;
+}
+
+#objeto5:hover {
+	animation: camaleon 2s infinite  ;
+} 
+
+#objeto6 {
+	background-color: aqua ;
+	position: relative;
+	animation: salvapantalla 10s linear infinite;
+	animation-play-state: paused;
+}
+
+
+.topnav {
+	width: 100%;
+	background-color: #333;
+	position: fixed;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.topnav a {
+	font-family: "Roboto Mono";
+	font-size: 16px;
+	color: white;
+	padding: 15px 25px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.topnav a:hover {
+	background-color: #D3D3D3;
+	color: black;
+}
+
+.topnav a.active  {
+	display: inline-block;
+	color: white;
+	background-color: #800080 ;
+	padding: 15px;
+	margin: 0;
+	font-family: "Roboto Mono";
+	font-weight: bold;
+}
+
+.topnav .icon {
+	display: none;
+}
+
+
+/*---v--- Animations ---v---*/
+
+@keyframes shake-horizontal {
+	0% {left:0px; top:0px;}
+	50% {left:50px; top:0px;}
+	100% {left:0px; top:0px;}
+}
+
+@keyframes shake-vertical {
+	0% {left:0px; top:0px;}
+	50% {left:0px; top:50px;}
+	100% {left:0px; top:0px;}
+}
+
+@keyframes camaleon {
+	from {background-color:lime;}
+	to {background-color: blue;}
+}
+
+ @keyframes salvapantalla {
+  0%   {background-color:aqua; left:0%; top:0%;}
+  25%  {background-color:yellow; left:50%; top:0%;}
+  50%  {background-color:green; left:50%; top:50%;}
+  75%  {background-color:blue; left:0%; top:50%;}
+  100% {background-color:aqua; left:0%; top:0%;}
+ }
+
+/* ---v--- Phone size ---v--- */
+
+@media screen and (max-width: 768px) {
+
+  .topnav a:not(:first-child) {display: none;}
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px ) {
+
+ [class*="col-"] {width: 100%;}
+.oculto { display: none;}
+body {
+	background-color: black;
+}
+
+ .topnav.responsive {position: relative;}
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block ;
+    text-align: left;
+  }
+
+.topnav.responsive a.ocultar {
+	display: none;
+} 
+
+}
+
+
+
+
+
+
+
+

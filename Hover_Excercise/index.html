@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PAI 2</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <script src="https://kit.fontawesome.com/80fb2e4eca.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+    <div class="row" id="menu">
+        <div class="topnav" id="myTopnav"> 
+            <a class="active"> Selecciona un objeto</a>
+            <a href="#objeto1">1</a> 
+            <a class="ocultar" href="#objeto2">2</a> 
+            <a href="#objeto3">3</a> 
+            <a class="ocultar" href="#objeto4">4</a> 
+            <a href="#objeto5">5</a> 
+            <a class="ocultar" href="#objeto6">6</a> 
+            <a href="javascript:void(0);" class="icon" onclick="Menu01()">
+            <i class="fa fa-bars"></i> </a>
+        </div>
+        
+    </div>
+        <!--transición de 50% a 100%-->
+        <div class="row full-height">
+        	<div id="objeto1" class="col-12"></div>
+        </div>
+        <!--dice que no-->
+        <div class="row full-height oculto">
+        	<div id="objeto2" class="col-12 shake-horizontal"></div>
+        </div>
+        <!--dice que si-->
+        <div class="row full-height">
+        	<div id="objeto3" class="col-12 shake-vertical"></div>
+        </div>
+        <!--se siente mal y todo gira-->
+        <div class="row full-height oculto">
+        	<div id="objeto4" class="col-12 rotate-center"></div>
+        </div>
+        <!--cambia de colores como el camaleón-->
+        <div class="row full-height">
+        	<div id="objeto5" class="col-12"></div>
+        </div>
+        <!--cambia de color y se traslada, cual protector de pantalla-->
+        <div class="row full-height oculto">
+        	<div id="objeto6" class="col-12" onclick="activateKF()"></div> 
+     </div>
+
+<script>
+function activateKF() {
+   document.getElementById("objeto6").style.WebkitAnimationPlayState = "running";
+   document.getElementById("objeto6").style.AnimationPlayState = "running";
+}
+
+function Menu01() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+    </body>
+</html>

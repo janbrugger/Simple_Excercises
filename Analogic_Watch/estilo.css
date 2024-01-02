@@ -1,0 +1,29 @@
+
+.reloj {
+	padding: 100px;
+	background-image: url(img/relojcircular.png);
+	width: 300px;
+	height: 300px;
+	border-radius:  300px;
+	background-color: #ededed;
+	background-size: 100%;
+	border: 10px solid #555;
+	display: flex;
+}
+
+.reloj img {
+	position: relative;
+	height: 300px;
+	transition: all 0.5s;
+}
+
+
+.reloj #minutos {
+ 	position: absolute;
+}
+
+.reloj #segundos {
+	 position: absolute;
+}
+
+

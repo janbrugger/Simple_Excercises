@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculadora</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+	<!--Roboto font--> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+	<!--Biz UDT Gothic font--> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+	<div class="banner">
+		<h1 data-text="Calculadora...">Calculadora... </h1>
+	</div>
+
+
+	<div id="appcr">
+		<form name="calculator">
+		<input type="texfield" name="ans" value="" readonly autocomplete="off" class="largoa1">
+		<input type="button" name="AC" value="7" onclick="document.calculator.ans.value+='7'" class="grey">
+		<input type="button" name="AC" value="8" onclick="document.calculator.ans.value+='8'" class="grey">
+		<input type="button" name="AC" value="9" onclick="document.calculator.ans.value+='9'" class="grey">
+		<input type="button" name="AC" value="+" onclick="document.calculator.ans.value+='+'" class="orange">
+		<br>
+
+		<input type="button" name="AC" value="4" onclick="document.calculator.ans.value+='4'" class="grey">
+		<input type="button" name="AC" value="5" onclick="document.calculator.ans.value+='5'" class="grey">
+		<input type="button" name="AC" value="6" onclick="document.calculator.ans.value+='6'" class="grey">
+		<input type="button" name="AC" value="-" onclick="document.calculator.ans.value+='-'" class="orange">
+		<br>
+
+		<input type="button" name="AC" value="1" onclick="document.calculator.ans.value+='1'" class="grey">
+		<input type="button" name="AC" value="2" onclick="document.calculator.ans.value+='2'" class="grey">
+		<input type="button" name="AC" value="3" onclick="document.calculator.ans.value+='3'" class="grey">
+		<input type="button" name="AC" value="X" onclick="document.calculator.ans.value+='*'" class="orange">
+		<br>
+
+		<input type="button" name="AC" value="0" onclick="document.calculator.ans.value+='0'"class="grey">
+		<input type="reset" value="C" class="white">
+		<input type="button" value="=" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)" class="white">
+		<input type="button" name="AC" value="/" onclick="document.calculator.ans.value+='/'" class="orange">
+
+		</form>
+
+	</div>
+
+
+</body>
+</html>
